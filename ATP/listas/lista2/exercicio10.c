@@ -7,7 +7,5 @@ int main() {
     int infantilB = idade >= 8 && idade <= 10;
     int juvenilA = idade >= 11 && idade <= 13;
     int juvenilB = idade >= 14 && idade <= 17;
-
-
     return 0;
 }
