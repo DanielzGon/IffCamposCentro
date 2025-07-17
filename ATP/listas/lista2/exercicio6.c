@@ -1,11 +1,14 @@
 #include <stdio.h>
 int main() {
-    int numero, antecessor, sucessor;
-    printf("Digite um numero inteiro: ");
+    int numero;
+    printf("Digite um numero: ");
     scanf("%d", &numero);
-    antecessor = numero - 1;
-    sucessor = numero + 1;
-    printf("O antecessor do numero %d é: %d\n", numero, antecessor);
-    printf("O sucessor do numero %d é: %d\n", numero, sucessor);
+
+    if(numero % 3 == 0){
+        printf("Seu número é divisivel por 3.\n");
+    }
+    else{
+        printf("Seu número não é divisivel por 3.\n");
+    }
     return 0;
 }

@@ -1,21 +1,45 @@
 #include <stdio.h>
-int main() {
-    int idade;
-    printf("Digite a idade do nadador: ");
-    scanf("%d", &idade);
-    if (idade >= 5 && idade <= 7) {
-        printf("Categoria: Infantil A\n");
+int main(void) {
+    float pesoTerra, pesoOutroPlaneta;
+    int planeta;
+    printf("Digite o peso da Terra: (em kg) ");
+    scanf("%f", &pesoTerra);
+    printf("\nEscolha o planeta para calcular seu peso:\n");
+    printf("1 - Mercúrio\n");
+    printf("2 - Vênus\n");
+    printf("3 - Marte\n");
+    printf("4 - Júpiter\n");
+    printf("5 - Saturno\n");
+    printf("6 - Urano\n");
+    printf("Digite o número do planeta: ");
+    scanf("%d", &planeta); 
+    if (planeta == 1) {
+        pesoOutroPlaneta = pesoTerra * 0.37;
+        printf("Seu peso em Mercúrio é: %.2f kg\n", pesoOutroPlaneta);
     } else {
-        if (idade <= 10) {
-            printf("Categoria: Infantil B\n");
+        if (planeta == 2) {
+            pesoOutroPlaneta = pesoTerra * 0.88;
+            printf("Seu peso em Vênus é: %.2f kg\n", pesoOutroPlaneta);
         } else {
-            if (idade <= 13) {
-                printf("Categoria: Juvenil A\n");
+            if (planeta == 3) {
+                pesoOutroPlaneta = pesoTerra * 0.38;
+                printf("Seu peso em Marte é: %.2f kg\n", pesoOutroPlaneta);
             } else {
-                if (idade <= 17) {
-                    printf("Categoria: Juvenil B\n");
+                if (planeta == 4) {
+                    pesoOutroPlaneta = pesoTerra * 2.64;
+                    printf("Seu peso em Júpiter é: %.2f kg\n", pesoOutroPlaneta);
                 } else {
-                    printf("Idade fora das categorias validas (5-17 anos).\n");
+                    if (planeta == 5) {
+                        pesoOutroPlaneta = pesoTerra * 1.15;
+                        printf("Seu peso em Saturno é: %.2f kg\n", pesoOutroPlaneta);
+                    } else {
+                        if (planeta == 6) {
+                            pesoOutroPlaneta = pesoTerra * 1.17;
+                            printf("Seu peso em Urano é: %.2f kg\n", pesoOutroPlaneta);
+                        } else {
+                            printf("Planeta invalido\n");
+                        }
+                    }
                 }
             }
         }
