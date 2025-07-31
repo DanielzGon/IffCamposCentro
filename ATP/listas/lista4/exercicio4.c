@@ -1,14 +1,12 @@
 #include <stdio.h>
-int main()
-{
-    int i, n;
-    printf("Digite um numero para somar todos seus antecessores: ");
+int main(){
+    int n, i, soma = 0;
+    printf("Digite um valor: ");
     scanf("%d", &n);
-    float soma = 0;
-    for (i = 0; i <= n; i++)
+    for (i = 1; i <=n; i++)
     {
-       soma = i + n;
+        soma = soma + i;
     }
-    printf("%2.f", soma);
+     printf("A soma de todos os números de 1 até %d é: %d\n", n , soma);
     return 0;
 }
